@@ -22,6 +22,26 @@
   color: #61dafb;
 }
 
+.Plus-Button {
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 8px;
+  border: 2px solid #e7e7e7;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 24px;
+  margin: 3px;
+}
+
+.Plus-Button:hover {
+  background-color: #555555;
+  border: 2px solid #555555;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
