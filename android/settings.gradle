@@ -1,0 +1,3 @@
+rootProject.name = 'hyphen'
+
+include ':app'
