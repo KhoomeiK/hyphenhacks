@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  width: 50%;
+}
+
+.navbar .search-container {
+  float: right;
+}
+
+.navbar .search-container .name {
+  border: none;
+  font-size: 18px;
+  padding: 6px;
+  margin-top: 10px;
+  height: 30px;
+  width: 300px;
+  margin-right: 6px;
+}
+
+.record {
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.2s;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 6px 14px;
+  margin-left: 3px;
+}
+
+.record:hover {
+  background-color: #555555;
+  border: none;
+  color: white;
+}
+
+.list-item {
+  background-color: #fffacd;
+  display: block;
+  border: 1px solid #f0e68c;
+  text-align: left;
+  margin: 4px;
+  font-size: 16px;
+  padding: 12px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.list-item:hover {
+  background-color: #f0e68c;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
