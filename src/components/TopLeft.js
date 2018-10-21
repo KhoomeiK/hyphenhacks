@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./Notes";
-import Columns from 'react-columns';
 import Record from "./Record";
+import { Container, Row, Col } from "reactstrap"
 
 export default class TopLeft extends Component {
   constructor(props) {
@@ -35,15 +35,19 @@ export default class TopLeft extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div>
-          <Columns columns="2">
+      <div>
+        <Row>
+          <Col>
             <Record fb={this.props.fb} />
+          </Col>
+          <Col>
             <input type="text" name="name" placeholder="Search..." />
-          </Columns>
-        </div>
-        {/* <Notes array={this.state.array} /> */}
-      </React.Fragment>
+          </Col>
+        </Row>
+        <Row>
+          <Notes array={this.state.array} />
+        </Row>
+      </div>
     );
   }
 }

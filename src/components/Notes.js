@@ -9,11 +9,11 @@ export default class Notes extends Component {
         let change = [];
         for (let i = 0; i < this.props.array.length; i++) {
             change.push(
-                <h1
+                <p
                     id={this.props.array[i].id}
                     title={this.props.array[i].title}
                     summary={this.props.array[i].summary}>
-                    {this.props.array[i].title}</h1>
+                    {this.props.array[i].title}</p>
             );
         }
         console.log(change);

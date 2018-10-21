@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Columns from 'react-columns';
-import './TopRight.css';
+import { Container, Row, Col } from "reactstrap"
+// import './TopRight.css';
 
-export class TopRight extends Component {
+export default class TopRight extends Component {
     render() {
         const divStyle = {
             position: 'absolute',
@@ -16,32 +16,29 @@ export class TopRight extends Component {
             paddingLeft: '50px',
         }
         const buttonStyle = {
-            paddingLeft: '20px',
-            paddingRight: '20px',
             fontSize: '100%',
             backgroundColor: '#00BFFF',
             fontFamily: './font.ttf',
             color: 'black',
-        }
-        const spanStyle = {
-            paddingLeft: '20px',
-            paddingRight: '20px',
+            margin: '10px',
+            padding: '10px'
         }
         return (
-            <Columns>
-                <div>
+            <Container>
+            <Row>
+                <Col>
                     <div style={divStyle}>
-                        <span style={spanStyle}>  </span>
-                        <span style={buttonStyle}>Summary       </span>
-                        <span style={spanStyle}>  </span>
-                        <span style={buttonStyle}>Transcript     </span>
-                        <span style={spanStyle}>  </span>
-                        <span style={buttonStyle}>Recording     </span>
-                        <span style={spanStyle}>  </span>
+                        <h1> SUMMA </h1>
+                        <span style={buttonStyle}>Summary </span>
+                        <span style={buttonStyle}>Transcript </span>
+                        <span style={buttonStyle}>Recording </span>
                     </div>
-                </div>
-                <button> signin </button>
-            </Columns>
+                </Col>
+                <Col>
+                    <button> signin </button>
+                </Col>
+            </Row>
+            </Container>
         );
         // onClick={this.props.fb.signin}
     }
