@@ -23,6 +23,46 @@ export default class TopLeft extends Component {
           id: "23456",
           title: "complete sex",
           summary: "time to completely sex"
+        },
+        {
+          id: "23425",
+          title: "",
+          summary: "time to neckrope"
+        },
+        {
+          id: "23541432",
+          title: "",
+          summary: "sex"
+        },
+        {
+          id: "234251",
+          title: "",
+          summary: "time to neckrope"
+        },
+        {
+          id: "2354134",
+          title: "",
+          summary: "sex"
+        },
+        {
+          id: "234255234",
+          title: "",
+          summary: "time to neckrope"
+        },
+        {
+          id: "23542455",
+          title: "",
+          summary: "sex"
+        },
+        {
+          id: "2255225",
+          title: "",
+          summary: "sex"
+        },
+        {
+          id: "234565",
+          title: "",
+          summary: "time to completely sex"
         }
       ]
     };
@@ -45,7 +85,7 @@ export default class TopLeft extends Component {
           </Col>
         </Row>
         <Row>
-          <div className="list-item">
+          <div className="list">
             <Notes array={this.state.array} />
           </div>
         </Row>
