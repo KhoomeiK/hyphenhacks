@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import stt from 'speech-to-text';
+import stt from "speech-to-text";
+import Mic from "./mic.jpg";
 
 export default class Record extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class Record extends Component {
   }
 
   start() {
-    const onAnythingSaid = text => this.setState({text});
+    const onAnythingSaid = text => this.setState({ text });
     this.state.listener = new stt(onAnythingSaid);
     this.state.listener.startListening();
     navigator.mediaDevices
@@ -59,13 +60,16 @@ export default class Record extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         <button className="record" onClick={this.toggle}>
           record
+=======
+        <button className="record" onClick={this.button}>
+          <img src={Mic} className="mic" />
+>>>>>>> d331b76e92288132de1f1c86c62b6dfc96860c70
         </button>
         {/* make this reactive */}
-        <p>
-          {this.state.text}
-        </p>
+        <p>{this.state.text}</p>
       </div>
     );
   }

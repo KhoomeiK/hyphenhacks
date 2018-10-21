@@ -2,8 +2,14 @@ import React, { Component } from "react";
 //import { Container, Row, Col } from "reactstrap";
 import { Container, Row, Col } from "react-grid-system";
 import "./TopRight.css";
+import {Text} from "./Text";
 
 export default class TopRight extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {type: "Transcribe"};
+  }
+
   render() {
     const divStyle = {
       // position: 'relative',
@@ -18,12 +24,12 @@ export default class TopRight extends Component {
       // <img stylesrc="i.imgur.com/dLElTb1.jpg" alt="Logo" />
     };
     const buttonStyle = {
-      marginRight: "10px",
-      backgroundColor: "#33CCFF",
-      borderRadius: "16px",
-      color: "white",
-      fontSize: "24px",
-      fontFamily: "sans-serif"
+        marginRight: '10px',
+        backgroundColor: '#33CCFF',
+        borderRadius: '2px',
+        color: 'white',
+        fontSize: '24px',
+        fontFamily:'Arial',
     };
 
     return (
@@ -55,13 +61,13 @@ export default class TopRight extends Component {
               <div className="buttongroup" style={{ gridColumns: "3" }}>
                 <Row>
                   <Col>
-                    <button style={buttonStyle}>SUMMARY </button>
+                    <button style={buttonStyle} onClick={e => this.setState({type: "Summary"})}>SUMMARY </button>
                   </Col>
                   <Col>
-                    <button style={buttonStyle}>TRANSCRIPT </button>
+                    <button style={buttonStyle} onClick={e => this.setState({type: "Transcribe"})}>TRANSCRIPT </button>
                   </Col>
                   <Col>
-                    <button style={buttonStyle}>RECORDING </button>
+                    <button style={buttonStyle} onClick={e => this.setState({type: "Recording"})}>RECORDING </button>
                   </Col>
                 </Row>
               </div>
@@ -69,7 +75,7 @@ export default class TopRight extends Component {
           </Col>
         </Row>
         <div className="output">
-          <p />
+          <Text type={this.state.type}/>
         </div>
       </Container>
     );
