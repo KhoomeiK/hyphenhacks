@@ -22,7 +22,9 @@ export default class Record extends Component {
   }
 
   start() {
-    const onAnythingSaid = text => this.setState({ text });
+    this.state.title = prompt("Note title?");
+    this.props.newRec(this.state.title);
+    const onAnythingSaid = text => this.props.rec(text);
     this.state.listener = new stt(onAnythingSaid);
     this.state.listener.startListening();
     navigator.mediaDevices
@@ -41,9 +43,8 @@ export default class Record extends Component {
         };
 
         this.state.mediaRecorder.onstop = e => {
-          let title = prompt("Note title?");
           let blob = new Blob(chunks, { type: "audio/mp3" });
-          this.props.fb.newNote(blob, title, this.state.text);
+          this.props.fb.newNote(blob, this.state.title, this.state.text);
           console.log(blob);
         };
       });
@@ -60,16 +61,10 @@ export default class Record extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
         <button className="record" onClick={this.toggle}>
-          record
-=======
-        <button className="record" onClick={this.button}>
           <img src={Mic} className="mic" />
->>>>>>> d331b76e92288132de1f1c86c62b6dfc96860c70
         </button>
         {/* make this reactive */}
-        <p>{this.state.text}</p>
       </div>
     );
   }

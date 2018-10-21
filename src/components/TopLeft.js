@@ -10,12 +10,12 @@ export default class TopLeft extends Component {
   }
 
   render() {
-    console.log(this.props.notes);
+    // console.log(this.props.notes);
     return (
       <div>
         <Row>
           <Col>
-            <Record fb={this.props.fb} />
+            <Record newRec={this.props.newRec} fb={this.props.fb} rec={this.props.rec} />
           </Col>
           <Col>
             <input type="text" name="name" placeholder="Search..." />
@@ -23,7 +23,7 @@ export default class TopLeft extends Component {
         </Row>
         <Row>
           <div className="list">
-            <Notes array={this.props.notes} />
+            <Notes array={this.props.notes} click={this.props.click} />
           </div>
         </Row>
       </div>

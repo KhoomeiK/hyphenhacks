@@ -29,16 +29,16 @@ export default class Firebase {
     this.state.setter = setter;
   }
 
-  getNotes() {
-    let arr = [];
-    this.state.db.doc(this.state.id).collection('notes').get().then(snap => {
-      snap.docs.forEach(element => {
-        arr.push(element.data());
-      });
-    });
-    console.log(arr);
-    this.state.setter(arr);
-  }
+  // getNotes() {
+  //   let arr = [];
+  //   this.state.db.doc(this.state.id).collection('notes').get().then(snap => {
+  //     snap.docs.forEach(element => {
+  //       arr.push(element.data());
+  //     });
+  //   });
+  //   console.log(arr);
+  //   this.state.setter(arr);
+  // }
 
   signin() {
     let provider = new firebase.auth.GoogleAuthProvider();
@@ -51,7 +51,7 @@ export default class Firebase {
       this.state.db.doc(id).get().then(snap => {
         if (snap.exists) { // previous user
           alert(`Welcome back, ${name}!`);
-          this.getNotes();
+          // this.getNotes();
         }
         else { // new user
           alert(`Welcome to summa, ${name}!`);

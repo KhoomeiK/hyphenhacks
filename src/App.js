@@ -13,6 +13,7 @@ class App extends Component {
 
     this.state = {
       id: 0,
+      text: "",
       notes: [
         {
           title: "Chinese Language 101",
@@ -72,21 +73,27 @@ class App extends Component {
       ]
     }
     this.noteClick = this.noteClick.bind(this);
-    this.setter = this.setter.bind(this);
+    this.newRecording = this.newRecording.bind(this);
   }
 
   componentDidMount() {
     this.props.fb.getArray(this.setter);
   }
 
-  async setter(notes) {
-    await this.setState({notes});
-    console.log(this.state.notes);
-  }
+  // setter(notes) {
+  //   this.setState({notes});
+  //   console.log(this.state.notes);
+  // }
 
   noteClick(id) {
-    console.log(id);
-    this.setState({id});
+    console.log(this.state.notes[id]);
+    this.setState({ id });
+  }
+
+  newRecording(title) {
+    let notes = this.state.notes;
+    notes.unshift({ title, sum: "", text: "" });
+    this.setState({notes});
   }
 
   render() {
@@ -95,10 +102,10 @@ class App extends Component {
         <Container>
           <Row>
             <Col sm={4}>
-              <TopLeft fb={this.props.fb} notes={this.state.notes} />
+              <TopLeft newRec={this.newRecording} rec={(text) => this.setState({ text })} fb={this.props.fb} notes={this.state.notes} click={this.noteClick} />
             </Col>
             <Col sm={8}>
-              <TopRight fb={this.props.fb} open={this.state.id} click={this.noteClick} />
+              <TopRight text={this.state.text} fb={this.props.fb} open={this.state.notes[this.state.id]} />
             </Col>
           </Row>
         </Container>

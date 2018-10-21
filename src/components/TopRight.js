@@ -2,34 +2,25 @@ import React, { Component } from "react";
 //import { Container, Row, Col } from "reactstrap";
 import { Container, Row, Col } from "react-grid-system";
 import "./TopRight.css";
-import {Text} from "./Text";
+import { Text } from "./Text";
 
 export default class TopRight extends Component {
   constructor(props) {
     super(props);
-    this.state = {type: "Transcribe"};
+    this.state = { output: this.props.open.sum };
   }
 
   render() {
-    const divStyle = {
-      // position: 'relative',
-      // right: '20px',
-      // width: '750px',
-      // height: '60px',
-      // padding: '20px',
-      // margin: '0px',
-      // // float: 'right',
-      // fontSize: '200%',
-      // paddingLeft: '50px',
-      // <img stylesrc="i.imgur.com/dLElTb1.jpg" alt="Logo" />
-    };
+    console.log(this.state.output);
+
+    const divStyle = {};
     const buttonStyle = {
-        marginRight: '10px',
-        backgroundColor: '#33CCFF',
-        borderRadius: '2px',
-        color: 'white',
-        fontSize: '24px',
-        fontFamily:'Arial',
+      marginRight: '10px',
+      backgroundColor: '#33CCFF',
+      borderRadius: '2px',
+      color: 'white',
+      fontSize: '24px',
+      fontFamily: 'Arial',
     };
 
     return (
@@ -61,13 +52,13 @@ export default class TopRight extends Component {
               <div className="buttongroup" style={{ gridColumns: "3" }}>
                 <Row>
                   <Col>
-                    <button style={buttonStyle} onClick={e => this.setState({type: "Summary"})}>SUMMARY </button>
+                    <button style={buttonStyle} onClick={e => this.setState({ output: this.props.open.sum })}>SUMMARY </button>
                   </Col>
                   <Col>
-                    <button style={buttonStyle} onClick={e => this.setState({type: "Transcribe"})}>TRANSCRIPT </button>
+                    <button style={buttonStyle} onClick={e => this.setState({ output: this.props.open.text })}>TRANSCRIPT </button>
                   </Col>
                   <Col>
-                    <button style={buttonStyle} onClick={e => this.setState({type: "Recording"})}>RECORDING </button>
+                    <button style={buttonStyle} onClick={e => this.setState({ output: "in progress" })}>RECORDING </button>
                   </Col>
                 </Row>
               </div>
@@ -75,7 +66,7 @@ export default class TopRight extends Component {
           </Col>
         </Row>
         <div className="output">
-          <Text type={this.state.type}/>
+          <p>{(this.props.text === "") ? this.state.output : this.props.text}</p>
         </div>
       </Container>
     );
