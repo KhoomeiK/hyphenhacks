@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap"
 export default class TopRight extends Component {
     render() {
         const divStyle = {
-            position: 'absolute',
+            position: 'relative',
             right: '20px',
             width: '750px',
             height: '60px',
