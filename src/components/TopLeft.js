@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Notes from "./Notes";
-import Record from './Record';
+import Record from "./Record";
 
 export default class TopLeft extends Component {
   constructor(props) {
@@ -27,6 +27,11 @@ export default class TopLeft extends Component {
     };
   }
 
+  onKeyPressed(e) {
+    console.log(e.keyCode);
+    if (e.keyCode === 13) console.log("Holy Shit");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -34,9 +39,13 @@ export default class TopLeft extends Component {
           <Record />
           <div className="search-container">
             <form>
-              <input type="text" name="name" placeholder="Search..." />
+              <input
+                type="text"
+                name="name"
+                placeholder="Search..."
+                onKeyDown={this.onKeyPressed}
+              />
             </form>
-            <button type="submit"><i class="fa fa-search"></i></button>
           </div>
         </div>
         <Notes array={this.state.array} />
