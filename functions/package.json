@@ -12,9 +12,12 @@
     "@firebase/storage": "^0.2.3",
     "@google-cloud/speech": "^2.1.1",
     "@google-cloud/storage": "^2.1.0",
+    "btoa": "^1.2.1",
     "filereader": "^0.10.3",
+    "firebase": "^5.5.5",
     "firebase-admin": "~5.12.1",
-    "firebase-functions": "^1.0.3"
+    "firebase-functions": "^1.0.3",
+    "http": "0.0.0"
   },
   "private": true
 }

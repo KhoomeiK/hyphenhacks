@@ -34,12 +34,13 @@ export default class Firebase {
 
       this.state.db.doc(id).get().then(snap => {
         if (snap.exists) { // previous user
-          alert(`Welcome back ${name}!`);
+          alert(`Welcome back, ${name}!`);
           this.state.db.doc(id).collection('notes').get().then(snap => {
             console.log(snap);
           });
         }
         else { // new user
+          alert(`Welcome to summa, ${name}!`);
           this.state.db.doc(id).set({
             id,
             name
@@ -54,7 +55,7 @@ export default class Firebase {
     let time = new Date().getTime().toString();
     console.log(typeof time);
 
-    this.state.storage.child(`${this.state.id}/${time}.wav`).put(aud).then(snapshot => {
+    this.state.storage.child(`${this.state.id}/${time}.flac`).put(aud).then(snapshot => {
       console.log('Uploaded the audio!');
     });
 

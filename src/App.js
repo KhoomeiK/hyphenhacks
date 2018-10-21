@@ -16,7 +16,7 @@ class App extends Component {
               <TopLeft fb={this.props.fb} />
             </Col>
             <Col>
-              <TopRight />
+              <TopRight fb={this.props.fb} />
             </Col>
           </Row>
         </Container>

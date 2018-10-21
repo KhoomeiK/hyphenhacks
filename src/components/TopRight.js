@@ -24,22 +24,19 @@ export default class TopRight extends Component {
             // padding: '10px'
         }
         return (
-            // <Container>
-                <Row>
-                    <Col>
-                        <div style={divStyle}>
-                            <h1> SUMMA </h1>
-                            <span style={buttonStyle}>Summary </span>
-                            <span style={buttonStyle}>Transcript </span>
-                            <span style={buttonStyle}>Recording </span>
-                        </div>
-                    </Col>
-                    <Col>
-                        <button> signin </button>
-                    </Col>
-                </Row>
-            // </Container>
+            <Row>
+                <Col>
+                    <div style={divStyle}>
+                        <h1> SUMMA </h1>
+                        <span style={buttonStyle}>Summary </span>
+                        <span style={buttonStyle}>Transcript </span>
+                        <span style={buttonStyle}>Recording </span>
+                    </div>
+                </Col>
+                <Col>
+                    <button onClick={this.props.fb.signin}> signin </button>
+                </Col>
+            </Row>
         );
-        // onClick={this.props.fb.signin}
     }
 }       

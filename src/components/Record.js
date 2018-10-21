@@ -37,7 +37,7 @@ export default class Record extends Component {
         this.state.mediaRecorder.onstop = e => {
           let title = prompt("Note title?");
 
-          let blob = new Blob(chunks, { type: "audio/wav; codecs=opus" });
+          let blob = new Blob(chunks, { type: "audio/flac" });
           this.props.fb.newNote(blob, title);
           console.log(blob);
         };
