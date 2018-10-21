@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'font';
-    src: local('font'), url(./font.ttf) format('ttf');
-  }
-
-  span{
-      font-family: 'font';
-  }
+  font-family: "font";
+  src: local("font"), url(./font.ttf) format("ttf");
+}

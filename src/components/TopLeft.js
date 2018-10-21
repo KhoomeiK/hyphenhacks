@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./Notes";
 import Record from "./Record";
-import { Container, Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap";
 
 export default class TopLeft extends Component {
   constructor(props) {
@@ -45,7 +45,9 @@ export default class TopLeft extends Component {
           </Col>
         </Row>
         <Row>
-          <Notes array={this.state.array} />
+          <div className="list-item">
+            <Notes array={this.state.array} />
+          </div>
         </Row>
       </div>
     );
