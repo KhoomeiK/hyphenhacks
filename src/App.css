@@ -44,21 +44,27 @@
 }
 
 .record {
-  background-color: #e7e7e7;
+  /* background-color: #e7e7e7;
   color: black;
   border-radius: 8px;
   border: none;
-  transition-duration: 0.3s;
   font-size: 30px;
   font-weight: bold;
-  padding: 6px 14px;
+  padding: 6px 14px; */
+  transition-duration: 0.3s;
   margin-left: 3px;
   margin-top: 6px;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  font-size: 0;
+  background-color: grey;
+  border: none;
 }
 
 .record:hover {
   background-color: red;
-  border: none;
+  border: 3px solid darkred;
   color: white;
 }
 
