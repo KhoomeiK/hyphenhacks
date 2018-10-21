@@ -11,18 +11,18 @@ export default class TopLeft extends Component {
       array: [
         {
           id: "234",
-          title: "neckrope",
-          summary: "time to neckrope"
+          title: "cs 101 10/15",
+          summary: "test num 1"
         },
         {
           id: "2345",
-          title: "double neckrope",
-          summary: "sex"
+          title: "physics 1b 10/13",
+          summary: "test num 2"
         },
         {
           id: "23456",
-          title: "complete sex",
-          summary: "time to completely sex"
+          title: "npr california report 10/1",
+          summary: "test num 3"
         }
       ]
     };

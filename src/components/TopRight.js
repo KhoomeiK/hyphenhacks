@@ -37,9 +37,10 @@ export default class TopRight extends Component {
         <Col>
         <button style={{position:'relative',float:'right',}} onClick={this.props.fb.signin}> signin </button>
           <div style={divStyle}>
-            <h2 style={{position:'relative',left:'240px'}}>SUMMA</h2>
+          <a href="https://ibb.co/i8fX1L"><img src="https://image.ibb.co/i6iS1L/image.png" alt="logo" border="0" style={{width:'225px',height:'auto',position:'relative',left:'225px'}}/></a>
+            
             <div style={{gridColumns:'3'}}>
-            <Row>
+            <Row>   
                 <Col>
                 <button style={buttonStyle}>SUMMARY </button>
                 </Col>
