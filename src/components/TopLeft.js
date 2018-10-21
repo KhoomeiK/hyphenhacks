@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./Notes";
 import Record from './Record';
+import Columns from 'react-columns';
 
 export default class TopLeft extends Component {
   constructor(props) {
@@ -30,16 +31,13 @@ export default class TopLeft extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="navbar">
-          <Record />
-          <div className="search-container">
-            <form>
-              <input type="text" name="name" placeholder="Search..." />
-            </form>
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </div>
+        <div>
+          <Columns columns="2">
+            <Record fb={this.props.fb} />
+            <input type="text" name="name" placeholder="Search..." />
+          </Columns>
         </div>
-        <Notes array={this.state.array} />
+        {/* <Notes array={this.state.array} /> */}
       </React.Fragment>
     );
   }

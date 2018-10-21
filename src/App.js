@@ -2,23 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 import TopRight from "./components/TopRight";
 import TopLeft from "./components/TopLeft";
+import Columns from 'react-columns';
 // import ReactScrollableList from "react-scrollable-list";
+
+const dimensions = [
+  { width: 100, height: 1200 },
+  { width: 500, height: 1200 }
+]
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="container">
-          <div className="row">
-            <TopLeft></TopLeft>
-            <div className="col-sm-8 text-center">
-              <TopRight />
-            </div>
-            <div className="row">
-            </div>
-            <button onClick={this.props.fb.signin}> signin </button>
-          </div>
-        </div>
+      <div>
+        <Columns columns='2' dimensions={dimensions}>
+          <TopLeft fb={this.props.fb} />
+          <TopRight />
+        </Columns>
       </div>
     );
   }
