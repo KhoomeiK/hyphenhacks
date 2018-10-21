@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import stt from 'speech-to-text';
 
 export default class Record extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bool: false
+      bool: false,
+      text: ""
     };
 
     this.button = this.button.bind(this);
@@ -19,6 +21,9 @@ export default class Record extends Component {
   }
 
   start() {
+    const onAnythingSaid = text => this.setState({text});
+    this.state.listener = new stt(onAnythingSaid);
+    this.state.listener.startListening();
     navigator.mediaDevices
       .getUserMedia({ audio: true, video: false })
       .then(stream => {
@@ -36,18 +41,18 @@ export default class Record extends Component {
 
         this.state.mediaRecorder.onstop = e => {
           let title = prompt("Note title?");
-
-          let blob = new Blob(chunks, { type: "audio/flac" });
-          this.props.fb.newNote(blob, title);
+          let blob = new Blob(chunks, { type: "audio/mp3" });
+          this.props.fb.newNote(blob, title, this.state.text);
           console.log(blob);
         };
       });
   }
 
   stop() {
+    this.state.listener.stopListening();
+    console.log(this.state.text);
     this.state.mediaRecorder.stop();
     this.state.stream.getTracks()[0].stop();
-    console.log(this.state.mediaRecorder.state);
     console.log("recorder stopped");
   }
 
@@ -55,10 +60,12 @@ export default class Record extends Component {
     return (
       <div>
         <button className="record" onClick={this.button}>
-          {" "}
-          record{" "}
-        </button>{" "}
+          record
+        </button>
         {/* make this reactive */}
+        <p>
+          {this.state.text}
+        </p>
       </div>
     );
   }
