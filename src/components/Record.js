@@ -9,12 +9,12 @@ export default class Record extends Component {
       text: ""
     };
 
-    this.button = this.button.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.start = this.start.bind(this);
     this.stop = this.stop.bind(this);
   }
 
-  async button() {
+  async toggle() {
     await this.setState({ bool: !this.state.bool });
     if (this.state.bool) this.start();
     else this.stop();
@@ -59,7 +59,7 @@ export default class Record extends Component {
   render() {
     return (
       <div>
-        <button className="record" onClick={this.button}>
+        <button className="record" onClick={this.toggle}>
           record
         </button>
         {/* make this reactive */}

@@ -33,8 +33,7 @@ export default class TopRight extends Component {
             <button
               className="login"
               style={{ position: "relative", float: "right" }}
-              onClick={this.props.fb.signin}
-            >
+              onClick={this.props.fb.signin}>
               {" "}
               login{" "}
             </button>

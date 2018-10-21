@@ -6,21 +6,26 @@ export default class Notes extends Component {
   // }
 
   loopRender() {
-    let change = [];
-    for (let i = 0; i < this.props.array.length; i++) {
-      change.push(
-        <p
-          className="list-item"
-          id={this.props.array[i].id}
-          title={this.props.array[i].title}
-          summary={this.props.array[i].summary}
-        >
-          {this.props.array[i].title}
-        </p>
-      );
+    console.log(this.props.array);
+    let arr = this.props.array;
+    console.log(arr);
+    if (arr.length !== 0) {
+      let change = [];
+      for (let i in arr) {
+        console.log(i);
+        console.log(arr[i].title);
+        change.push(
+          <p
+            className="list-item"
+            id={i}
+          >
+            {arr[i].title}
+          </p>
+        );
+      }
+      console.log(change);
+      return change;
     }
-    console.log(change);
-    return change;
   }
 
   render() {
