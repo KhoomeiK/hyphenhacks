@@ -28,7 +28,7 @@ export class TopLeft extends Component {
         return (
             <React.Fragment>
                 <div className="navBar">
-                    <button className="Plus-button" onClick={}>+</button>
+                    <button className="Plus-button">+</button>
                     <div className="search-container">
                         <form>
                             <input type="text" name="name" placeholder="Search..." />
