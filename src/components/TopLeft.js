@@ -31,12 +31,12 @@ export default class TopLeft extends Component {
         },
         {
           id: "23541432",
-          title: "",
+          title: "complete sex",
           summary: "test"
         },
         {
           id: "234251",
-          title: "",
+          title: "seeeeeeeeeex",
           summary: "test"
         },
         {
@@ -46,12 +46,12 @@ export default class TopLeft extends Component {
         },
         {
           id: "234255234",
-          title: "",
+          title: "seeeeeeeeeeeeeeeeeeex",
           summary: "test"
         },
         {
           id: "23542455",
-          title: "",
+          title: "seeeeeeeeeeeeeex",
           summary: "test"
         },
         {
