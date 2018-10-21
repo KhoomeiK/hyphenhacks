@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Notes extends Component {
+export class Notes extends Component {
 
     loopRender() {
         let change =  [];

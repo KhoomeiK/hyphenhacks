@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Notes from "./Notes";
 
 export class TopLeft extends Component {
   constructor(props) {
@@ -26,11 +25,10 @@ export class TopLeft extends Component {
     };
   }
 
-<<<<<<< HEAD
     render() {
         return (
             <React.Fragment>
-                <div className="navBar">
+                <div className="navbar">
                     <button className="Plus-button">+</button>
                     <div className="search-container">
                         <form>
@@ -44,24 +42,3 @@ export class TopLeft extends Component {
         );
     }
 }
-=======
-  render() {
-    return (
-      <React.Fragment>
-        <div className="navbar">
-          <button className="Plus-button">+</button>
-          <div className="search-container">
-            <form>
-              <input type="text" name="name" placeholder="Search..." />
-            </form>
-            <button type="submit">
-              <i class="fa fa-search" />
-            </button>
-          </div>
-        </div>
-        <Notes array={this.state.array} />
-      </React.Fragment>
-    );
-  }
-}
->>>>>>> 3bd6006303d8d00aa624d2e37c4da75f8b38fc47

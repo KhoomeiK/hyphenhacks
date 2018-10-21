@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './luigi.png';
 import './App.css';
-import { TopLeft } from "./TopLeft";
 import {TopRight} from "./TopRight";
 import {Notes} from "./Notes";
+import ReactScrollableList from "react-scrollable-list";
 
 class App extends Component {
   render() {
@@ -17,10 +16,13 @@ class App extends Component {
             <form>
               <input type="text" name="name" placeholder="Search" />
             </form>
-            <Notes/>
+            <ReactScrollableList
+            listItems={[<Notes/>]}
+            heightofItem={30}
+            maxItemsToRender={50}/>
           </div>
           <div class="col-sm-8 text-center">
-            <TopRight/>
+            <TopRight />
           </div>
           <div class="row">
 
