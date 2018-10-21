@@ -1,4 +1,8 @@
 @font-face {
-  font-family: "font";
+  font-family: "font1";
   src: local("font"), url(./font.ttf) format("ttf");
+}
+
+#newfont {
+  font-family:"font1";
 }
