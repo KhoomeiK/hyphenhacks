@@ -11,10 +11,14 @@ export default class Firebase {
       messagingSenderId: "201780012152"
     });
 
+    const firestore = firebase.firestore();
+    const settings = { timestampsInSnapshots: true };
+    firestore.settings(settings);
+
     this.state = {};
 
     this.state.storage = firebase.storage().ref();
-    this.state.db = firebase.firestore().collection('users');
+    this.state.db = firestore.collection('users');
 
     this.signin = this.signin.bind(this);
     this.signout = this.signout.bind(this);
@@ -47,13 +51,14 @@ export default class Firebase {
   signout() { }
 
   newNote(aud, title) { // id = user id | time = identification | aud = blob
-    let time = new Date().getTime();
+    let time = new Date().getTime().toString();
+    console.log(typeof time);
 
     this.state.storage.child(`${this.state.id}/${time}.wav`).put(aud).then(snapshot => {
       console.log('Uploaded the audio!');
     });
 
-    this.state.db.doc(`${this.state.id}`).collection('notes').doc(time).set({
+    this.state.db.doc(this.state.id).collection('notes').doc(time).set({
       title
     });
   }

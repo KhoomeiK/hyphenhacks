@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
-import { runInThisContext } from 'vm';
 
 export default class Record extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      bool: false
+    };
 
+    this.button = this.button.bind(this);
     this.start = this.start.bind(this);
     this.stop = this.stop.bind(this);
+  }
+
+  async button() {
+    await this.setState({ bool: !this.state.bool });
+    if (this.state.bool)
+      this.start()
+    else
+      this.stop()
   }
 
   start() {
@@ -44,9 +54,7 @@ export default class Record extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.fb.signin}> signin </button>
-        <button onClick={this.start} > start </button>
-        <button onClick={this.stop} > stop </button>
+        <button onClick={this.button} > record </button> {/* make this reactive */}
       </div>
     )
   }
