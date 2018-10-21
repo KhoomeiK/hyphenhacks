@@ -48,15 +48,35 @@
   color: black;
   border-radius: 8px;
   border: none;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   font-size: 30px;
   font-weight: bold;
   padding: 6px 14px;
   margin-left: 3px;
+  margin-top: 6px;
 }
 
 .record:hover {
-  background-color: #555555;
+  background-color: red;
+  border: none;
+  color: white;
+}
+
+.login {
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.3s;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 6px 14px;
+  margin-left: 3px;
+  margin-top: 6px;
+}
+
+.login:hover {
+  background-color: gray;
   border: none;
   color: white;
 }
@@ -66,7 +86,7 @@
   border: 1px solid black;
   border-radius: px;
   text-decoration: none;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   font-weight: bold;
   display: block;
   text-align: left;
@@ -84,10 +104,28 @@
   margin: 0px;
   font-size: 16px;
   padding: 12px 16px;
-  height: 54px;
+  height: 53px;
   font-weight: bold;
   text-decoration: none;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
+}
+
+.buttongroup {
+  border-radius: 16px;
+  border: 1px solid black;
+  height: 40px;
+  padding: 2px;
+  text-align: center;
+}
+
+.output {
+  background-color: #fffacd;
+  display: block;
+  border: 1px solid black;
+  height: 522px;
+  margin: 4px;
+  margin-top: 20px;
+  border-radius: 4px;
 }
 
 .list-item:hover {
@@ -96,13 +134,6 @@
 
 span {
   font-family: "font";
-}
-
-.buttonStyle {
-  color: black;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
 }
 
 img {
