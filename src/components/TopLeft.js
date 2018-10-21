@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./Notes";
-import Record from './Record';
 import Columns from 'react-columns';
+import Record from "./Record";
 
 export default class TopLeft extends Component {
   constructor(props) {
@@ -26,6 +26,11 @@ export default class TopLeft extends Component {
         }
       ]
     };
+  }
+
+  onKeyPressed(e) {
+    console.log(e.keyCode);
+    if (e.keyCode === 13) console.log("Holy Shit");
   }
 
   render() {

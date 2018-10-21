@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Record extends Component {
   constructor(props) {
@@ -14,34 +14,34 @@ export default class Record extends Component {
 
   async button() {
     await this.setState({ bool: !this.state.bool });
-    if (this.state.bool)
-      this.start()
-    else
-      this.stop()
+    if (this.state.bool) this.start();
+    else this.stop();
   }
 
   start() {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(stream => {
-      this.state.stream = stream;
-      this.state.mediaRecorder = new MediaRecorder(stream);
+    navigator.mediaDevices
+      .getUserMedia({ audio: true, video: false })
+      .then(stream => {
+        this.state.stream = stream;
+        this.state.mediaRecorder = new MediaRecorder(stream);
 
-      this.state.mediaRecorder.start();
-      console.log(this.state.mediaRecorder.state);
-      console.log("recorder started");
+        this.state.mediaRecorder.start();
+        console.log(this.state.mediaRecorder.state);
+        console.log("recorder started");
 
-      let chunks = [];
-      this.state.mediaRecorder.ondataavailable = e => {
-        chunks.push(e.data);
-      }
+        let chunks = [];
+        this.state.mediaRecorder.ondataavailable = e => {
+          chunks.push(e.data);
+        };
 
-      this.state.mediaRecorder.onstop = e => {
-        let title = prompt("Note title?");
+        this.state.mediaRecorder.onstop = e => {
+          let title = prompt("Note title?");
 
-        let blob = new Blob(chunks, { 'type': 'audio/wav; codecs=opus' });
-        this.props.fb.newNote(blob, title);
-        console.log(blob);
-      }
-    });
+          let blob = new Blob(chunks, { type: "audio/wav; codecs=opus" });
+          this.props.fb.newNote(blob, title);
+          console.log(blob);
+        };
+      });
   }
 
   stop() {
@@ -54,8 +54,12 @@ export default class Record extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.button} > record </button> {/* make this reactive */}
+        <button className="record" onClick={this.button}>
+          {" "}
+          record{" "}
+        </button>{" "}
+        {/* make this reactive */}
       </div>
-    )
+    );
   }
 }

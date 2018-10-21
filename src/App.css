@@ -32,38 +32,31 @@
   float: right;
 }
 
-.navbar .search-container button {
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 18px;
+.navbar .search-container .name {
   border: none;
-  cursor: pointer;
-  transition-duration: 0.2s;
+  font-size: 18px;
+  padding: 6px;
+  margin-top: 10px;
+  height: 30px;
+  width: 300px;
+  margin-right: 6px;
 }
 
-.navbar .search-container button:hover {
-  background: #ccc;
-}
-
-.navbar .Plus-button {
+.record {
   background-color: #e7e7e7;
   color: black;
   border-radius: 8px;
-  border: 2px solid #e7e7e7;
-  text-align: center;
-  text-decoration: none;
+  border: none;
   transition-duration: 0.2s;
   font-size: 30px;
   font-weight: bold;
-  padding: 3px 9px;
-  margin: 3px;
+  padding: 6px 14px;
+  margin-left: 3px;
 }
 
-.navbar .Plus-button:hover {
+.record:hover {
   background-color: #555555;
-  border: 2px solid #555555;
+  border: none;
   color: white;
 }
 
