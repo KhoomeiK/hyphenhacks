@@ -10,7 +10,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Columns columns='4' dimensions={dimensions}> */}
         <Container>
           <Row>
             <Col>
@@ -21,7 +20,6 @@ class App extends Component {
             </Col>
           </Row>
         </Container>
-        {/* </Columns> */}
       </div>
     );
   }
