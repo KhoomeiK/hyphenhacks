@@ -10,17 +10,17 @@ export default class TopLeft extends Component {
       array: [
         {
           id: "234",
-          title: "neckrope",
+          title: "hi",
           summary: "time to neckrope"
         },
         {
           id: "2345",
-          title: "double neckrope",
+          title: "double hello",
           summary: "sex"
         },
         {
           id: "23456",
-          title: "complete sex",
+          title: "hey",
           summary: "time to completely sex"
         }
       ]
@@ -36,7 +36,7 @@ export default class TopLeft extends Component {
             <form>
               <input type="text" name="name" placeholder="Search..." />
             </form>
-            <button type="submit"><i class="fa fa-search"></i></button>
+           
           </div>
         </div>
         <Notes array={this.state.array} />

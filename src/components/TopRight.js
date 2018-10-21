@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import './TopRight.css';
 
-export class TopRight extends Component {
+export default class TopRight extends Component {
     render() {
         const divStyle = {
-            position: 'absolute',
+            position: 'relative',
             right: '20px',
             width: '750px',
             height: '60px',
