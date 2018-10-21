@@ -57,7 +57,7 @@
   transition-duration: 0.4s;
   font-size: 20px;
   font-weight: bold;
-  padding: 24px;
+  padding: 3px;
   margin: 3px;
 }
 
@@ -65,6 +65,23 @@
   background-color: #555555;
   border: 2px solid #555555;
   color: white;
+}
+
+.list-item {
+  background-color: #fffacd;
+  display: block;
+  border: 1px solid #f0e68c;
+  text-align: left;
+  margin: 4px;
+  font-size: 16px;
+  padding: 12px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.list-item:hover {
+  background-color: #f0e68c;
 }
 
 @keyframes App-logo-spin {
