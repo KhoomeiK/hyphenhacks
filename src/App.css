@@ -96,6 +96,9 @@
   font-weight: bold;
   display: block;
   text-align: left;
+  max-height: 583px;
+  position: relative;
+  overflow: scroll;
 }
 
 .list:hover {
@@ -132,6 +135,8 @@
   margin: 4px;
   margin-top: 20px;
   border-radius: 4px;
+  position: relative;
+  overflow: scroll;
 }
 
 .list-item:hover {
