@@ -11,7 +11,8 @@
     "react-grid-system": "^4.3.1",
     "react-scripts": "2.0.5",
     "react-scrollable-list": "^1.2.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "speech-to-text": "^0.7.4"
   },
   "scripts": {
     "start": "react-scripts start",

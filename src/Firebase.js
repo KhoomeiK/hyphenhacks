@@ -24,6 +24,7 @@ export default class Firebase {
     this.signout = this.signout.bind(this);
     this.newNote = this.newNote.bind(this);
   }
+
   signin() {
     let provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(res => {
@@ -51,7 +52,7 @@ export default class Firebase {
   }
   signout() { }
 
-  newNote(aud, title) { // id = user id | time = identification | aud = blob
+  async newNote(aud, title, text) { // id = user id | time = identification | aud = blob
     let time = new Date().getTime().toString();
     console.log(typeof time);
 
@@ -60,7 +61,8 @@ export default class Firebase {
     });
 
     this.state.db.doc(this.state.id).collection('notes').doc(time).set({
-      title
+      title,
+      text
     });
   }
 }

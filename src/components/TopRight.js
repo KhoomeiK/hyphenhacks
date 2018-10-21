@@ -35,7 +35,7 @@ export default class TopRight extends Component {
       // <Container>
       <Row style={{gridColumns:'2'}}>
         <Col>
-        <button style={{position:'relative',float:'right',}}> signin </button>
+        <button style={{position:'relative',float:'right',}} onClick={this.props.fb.signin}> signin </button>
           <div style={divStyle}>
             <h2 style={{position:'relative',left:'240px'}}>SUMMA</h2>
             <div style={{gridColumns:'3'}}>
@@ -51,13 +51,10 @@ export default class TopRight extends Component {
                 </Col>
             </Row>
             </div>
-            
-            
           </div>
         </Col>
       </Row>
       // </Container>
     );
-    // onClick={this.props.fb.signin}
   }
 }
