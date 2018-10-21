@@ -10,6 +10,10 @@ export default class TopRight extends Component {
     this.state = { output: this.props.open.sum };
   }
 
+  componentDidUpdate(props) {
+    this.state.output = this.props.open.sum;
+  }
+
   render() {
     console.log(this.state.output);
 
