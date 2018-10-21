@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import TopRight from "./components/TopRight";
 import TopLeft from "./components/TopLeft";
-import { Container, Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap";
 // import Columns from 'react-columns';
 // import ReactScrollableList from "react-scrollable-list";
 
