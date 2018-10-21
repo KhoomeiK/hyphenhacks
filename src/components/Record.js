@@ -61,7 +61,7 @@ export default class Record extends Component {
     return (
       <div>
         <button className="record" onClick={this.button}>
-          <img src={Mic} />
+          <img src={Mic} className="mic" />
         </button>
         {/* make this reactive */}
         <p>{this.state.text}</p>

@@ -68,11 +68,6 @@ export default class TopLeft extends Component {
     };
   }
 
-  onKeyPressed(e) {
-    console.log(e.keyCode);
-    if (e.keyCode === 13) console.log("Holy Shit");
-  }
-
   render() {
     return (
       <div>

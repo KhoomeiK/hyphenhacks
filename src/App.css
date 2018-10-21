@@ -148,6 +148,10 @@ img {
   -webkit-animation: fadein 3s;
 }
 
+.mic {
+  animation: none;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
