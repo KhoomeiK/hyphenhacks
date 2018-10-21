@@ -94,9 +94,6 @@ span .buttonStyle {
 
 img {
   width: 100%;
-}
-
-h1 {
   animation: fadein 3s;
   -webkit-animation: fadein 3s;
 }

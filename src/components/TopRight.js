@@ -16,15 +16,14 @@ export default class TopRight extends Component {
       // paddingLeft: '50px',
     };
     return (
-      // <Container> <img src="images/logo.jpg" alt="Logo">
+      // <Container>
       <Row>
         <Col>
           <div style={divStyle}>
-            <h1> SUMMA </h1>
-            <h1 className="test">hot</h1>
-            <span className="buttonStyle">Summary </span>
-            <span className="buttonStyle">Transcript </span>
-            <span className="buttonStyle">Recording </span>
+            <img src="logo2.PNG" alt="Logo" />
+            <button className="buttonStyle">Summary </button>
+            <button className="buttonStyle">Transcript </button>
+            <button className="buttonStyle">Recording </button>
           </div>
         </Col>
         <Col>
