@@ -3,7 +3,7 @@ import "./App.css";
 import TopRight from "./components/TopRight";
 import TopLeft from "./components/TopLeft";
 //import { Container, Row, Col } from "reactstrap";
-import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row, Col } from "react-grid-system";
 // import Columns from 'react-columns';
 // import ReactScrollableList from "react-scrollable-list";
 
@@ -30,48 +30,58 @@ class App extends Component {
           sum: `Programmable devices have existed at least as far back as 1206 AD, when the automata of Al-Jazari were programmable, via pegs and cams, to play various rhythms and drum patterns;[3] and the 1801 Jacquard loom could produce entirely different weaves by changing the "program" - a series of pasteboard cards with holes punched in them. In the 1880s Herman Hollerith invented the concept of storing data in machine-readable form.[5] Later a control panel (plugboard) added to his 1906 Type I Tabulator allowed it to be programmed for different jobs, and by the late 1940s, unit record equipment such as the IBM 602 and IBM 604, were programmed by control panels in a similar way; as were the first electronic computers. Machine code was the language of early programs, written in the instruction set of the particular machine, often in binary notation. Assembly languages were soon developed that let the programmer specify instruction in a text format, (e.g., ADD X, TOTAL), with abbreviations for each operation code and meaningful names for specifying addresses. High-level languages allow the programmer to write programs in terms that are syntactically richer, and more capable of abstracting the code, making it targetable to varying machine instruction sets via compilation declarations and heuristics. They harness the power of computers to make programming easier[6] by allowing programmers to specify calculations by entering a formula using infix notation (e.g., Y = X*2 + 5*X + 9) for example. Whatever the approach to development may be, the final program must satisfy some fundamental properties. Portability: the range of computer hardware and operating system platforms on which the source code of a program can be compiled/interpreted and run. This depends on differences in the programming facilities provided by the different platforms, including hardware and operating system resources, expected behavior of the hardware and operating system, and availability of platform specific compilers (and sometimes libraries) for the language of the source code. Maintainability: the ease with which a program can be modified by its present or future developers in order to make improvements or customizations, fix bugs and security holes, or adapt it to new environments. In computer programming, readability refers to the ease with which a human reader can comprehend the purpose, control flow, and operation of source code. Following a consistent programming style often helps readability. However, readability is more than just programming style. Various visual programming languages have also been developed with the intent to resolve readability concerns by adopting non-traditional approaches to code structure and display.`,
           text: `Ada Lovelace, whose notes added to the end of Luigi Menabrea's paper included the first algorithm designed for processing by an Analytical Engine. She is often recognized as history's first computer programmer. Programmable devices have existed at least as far back as 1206 AD, when the automata of Al-Jazari were programmable, via pegs and cams, to play various rhythms and drum patterns;[3] and the 1801 Jacquard loom could produce entirely different weaves by changing the "program" - a series of pasteboard cards with holes punched in them. However, the first computer program is generally dated to 1843, when mathematician Ada Lovelace published an algorithm to calculate a sequence of Bernoulli numbers, intended to be carried out by Charles Babbage's Analytical Engine.[4] Data and instructions were once stored on external punched cards, which were kept in order and arranged in program decks. In the 1880s Herman Hollerith invented the concept of storing data in machine-readable form.[5] Later a control panel (plugboard) added to his 1906 Type I Tabulator allowed it to be programmed for different jobs, and by the late 1940s, unit record equipment such as the IBM 602 and IBM 604, were programmed by control panels in a similar way; as were the first electronic computers. However, with the concept of the stored-program computers introduced in 1949, both programs and data were stored and manipulated in the same way in computer memory. Machine code was the language of early programs, written in the instruction set of the particular machine, often in binary notation. Assembly languages were soon developed that let the programmer specify instruction in a text format, (e.g., ADD X, TOTAL), with abbreviations for each operation code and meaningful names for specifying addresses. However, because an assembly language is little more than a different notation for a machine language, any two machines with different instruction sets also have different assembly languages. Wired control panel for an IBM 402 Accounting Machine. High-level languages allow the programmer to write programs in terms that are syntactically richer, and more capable of abstracting the code, making it targetable to varying machine instruction sets via compilation declarations and heuristics. They harness the power of computers to make programming easier[6] by allowing programmers to specify calculations by entering a formula using infix notation (e.g., Y = X*2 + 5*X + 9) for example. FORTRAN, the first widely used high-level language to have a functional implementation which permitted the abstraction of reusable blocks of code, came out in 1957[7] and many other languages were soon developed - in particular, COBOL aimed at commercial data processing, and Lisp for computer research. Programs were mostly still entered using punched cards or paper tape. See computer programming in the punch card era. By the late 1960s, data storage devices and computer terminals became inexpensive enough that programs could be created by typing directly into the computers. Text editors were developed that allowed changes and corrections to be made much more easily than with punched cards. Modern programming This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2010) (Learn how and when to remove this template message) Quality requirements Whatever the approach to development may be, the final program must satisfy some fundamental properties. The following properties are among the most important: Reliability: how often the results of a program are correct. This depends on conceptual correctness of algorithms, and minimization of programming mistakes, such as mistakes in resource management (e.g., buffer overflows and race conditions) and logic errors (such as division by zero or off-by-one errors). Robustness: how well a program anticipates problems due to errors (not bugs). This includes situations such as incorrect, inappropriate or corrupt data, unavailability of needed resources such as memory, operating system services and network connections, user error, and unexpected power outages. Usability: the ergonomics of a program: the ease with which a person can use the program for its intended purpose or in some cases even unanticipated purposes. Such issues can make or break its success even regardless of other issues. This involves a wide range of textual, graphical and sometimes hardware elements that improve the clarity, intuitiveness, cohesiveness and completeness of a program's user interface. Portability: the range of computer hardware and operating system platforms on which the source code of a program can be compiled/interpreted and run. This depends on differences in the programming facilities provided by the different platforms, including hardware and operating system resources, expected behavior of the hardware and operating system, and availability of platform specific compilers (and sometimes libraries) for the language of the source code. Maintainability: the ease with which a program can be modified by its present or future developers in order to make improvements or customizations, fix bugs and security holes, or adapt it to new environments. Good practices[8] during initial development make the difference in this regard. This quality may not be directly apparent to the end user but it can significantly affect the fate of a program over the long term. Efficiency/performance: Measure of system resources a program consumes (processor time, memory space, slow devices such as disks, network bandwidth and to some extent even user interaction): the less, the better. This also includes careful management of resources, for example cleaning up temporary files and eliminating memory leaks. Readability of source code In computer programming, readability refers to the ease with which a human reader can comprehend the purpose, control flow, and operation of source code. It affects the aspects of quality above, including portability, usability and most importantly maintainability. Readability is important because programmers spend the majority of their time reading, trying to understand and modifying existing source code, rather than writing new source code. Unreadable code often leads to bugs, inefficiencies, and duplicated code. A study[9] found that a few simple readability transformations made code shorter and drastically reduced the time to understand it. Following a consistent programming style often helps readability. However, readability is more than just programming style. Many factors, having little or nothing to do with the ability of the computer to efficiently compile and execute the code, contribute to readability.[10] Some of these factors include: Different indent styles (whitespace) Comments Decomposition Naming conventions for objects (such as variables, classes, procedures, etc.) The presentation aspects of this (such as indents, line breaks, color highlighting, and so on) are often handled by the source code editor, but the content aspects reflect the programmer's talent and skills. Various visual programming languages have also been developed with the intent to resolve readability concerns by adopting non-traditional approaches to code structure and display. Integrated development environments (IDEs) aim to integrate all such help. Techniques like Code refactoring can enhance readability. Algorithmic complexity The academic field and the engineering practice of computer programming are both largely concerned with discovering and implementing the most efficient algorithms for a given class of problem. For this purpose, algorithms are classified into orders using so-called Big O notation, which expresses resource use, such as execution time or memory consumption, in terms of the size of an input. Expert programmers are familiar with a variety of well-established algorithms and their respective complexities and use this knowledge to choose algorithms that are best suited to the circumstances. Methodologies The first step in most formal software development processes is requirements analysis, followed by testing to determine value modeling, implementation, and failure elimination (debugging). There exist a lot of differing approaches for each of those tasks. One approach popular for requirements analysis is Use Case analysis. Many programmers use forms of Agile software development where the various stages of formal software development are more integrated together into short cycles that take a few weeks rather than years. There are many approaches to the Software development process. Popular modeling techniques include Object-Oriented Analysis and Design (OOAD) and Model-Driven Architecture (MDA). The Unified Modeling Language (UML) is a notation used for both the OOAD and MDA. A similar technique used for database design is Entity-Relationship Modeling (ER Modeling). Implementation techniques include imperative languages (object-oriented or procedural), functional languages, and logic languages.`
         },
-        // {
-        //   id: "23425",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "23541432",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "234251",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "2354134",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "234255234",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "23542455",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "2255225",
-        //   title: "",
-        //   summary: "test"
-        // },
-        // {
-        //   id: "234565",
-        //   title: "",
-        //   summary: "test"
-        // }
+        {
+          id: "23425",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "23432315",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "23421235",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "23541432",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "234251",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "2354134",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "234255234",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "23542455",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "2255225",
+          title: "",
+          summary: "test"
+        },
+        {
+          id: "234565",
+          title: "",
+          summary: "test"
+        }
       ]
-    }
+    };
     this.noteClick = this.noteClick.bind(this);
     this.newRecording = this.newRecording.bind(this);
   }
@@ -93,7 +103,7 @@ class App extends Component {
   newRecording(title) {
     let notes = this.state.notes;
     notes.unshift({ title, sum: "", text: "" });
-    this.setState({notes});
+    this.setState({ notes });
   }
 
   render() {
@@ -102,10 +112,20 @@ class App extends Component {
         <Container>
           <Row>
             <Col sm={4}>
-              <TopLeft newRec={this.newRecording} rec={(text) => this.setState({ text })} fb={this.props.fb} notes={this.state.notes} click={this.noteClick} />
+              <TopLeft
+                newRec={this.newRecording}
+                rec={text => this.setState({ text })}
+                fb={this.props.fb}
+                notes={this.state.notes}
+                click={this.noteClick}
+              />
             </Col>
             <Col sm={8}>
-              <TopRight text={this.state.text} fb={this.props.fb} open={this.state.notes[this.state.id]} />
+              <TopRight
+                text={this.state.text}
+                fb={this.props.fb}
+                open={this.state.notes[this.state.id]}
+              />
             </Col>
           </Row>
         </Container>

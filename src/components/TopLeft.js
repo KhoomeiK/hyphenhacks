@@ -6,7 +6,9 @@ import { Container, Row, Col } from "reactstrap";
 export default class TopLeft extends Component {
   onKeyPressed(e) {
     console.log(e.keyCode);
-    if (e.keyCode === 13) console.log("type");
+    if (e.keyCode === 13) {
+      console.log("type");
+    }
   }
 
   render() {
@@ -15,10 +17,19 @@ export default class TopLeft extends Component {
       <div>
         <Row>
           <Col>
-            <Record newRec={this.props.newRec} fb={this.props.fb} rec={this.props.rec} />
+            <Record
+              newRec={this.props.newRec}
+              fb={this.props.fb}
+              rec={this.props.rec}
+            />
           </Col>
           <Col>
-            <input type="text" name="name" placeholder="Search..." />
+            <input
+              type="text"
+              name="name"
+              placeholder="Search..."
+              onKeyDown={this.onKeyPressed}
+            />
           </Col>
         </Row>
         <Row>
