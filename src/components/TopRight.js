@@ -26,7 +26,7 @@ export default class TopRight extends Component {
         borderRadius: '2px',
         color: 'white',
         fontSize: '24px',
-        fontFamily:'font1',
+        fontFamily:'Arial',
     
 
        
@@ -35,7 +35,7 @@ export default class TopRight extends Component {
       // <Container>
       <Row style={{gridColumns:'2'}}>
         <Col>
-        <button style={{position:'relative',float:'right',}} onClick={this.props.fb.signin}> signin </button>
+        <button style={{position:'relative',float:'right',borderRadius: '5px'}} onClick={this.props.fb.signin}> Login </button>
           <div style={divStyle}>
           <a href="https://ibb.co/i8fX1L"><img src="https://image.ibb.co/i6iS1L/image.png" alt="logo" border="0" style={{width:'225px',height:'auto',position:'relative',left:'225px'}}/></a>
             
