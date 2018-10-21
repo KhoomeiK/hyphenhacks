@@ -26,11 +26,14 @@ export class TopLeft extends Component {
 
     render() {
         return (
-            <div>
-                <button>+</button>
-                <form>
-                    <input type="text" name="name" placeholder="Search" />
-                </form>
+            <button className="Plus-button" onClick={}>+</button>
+            <div className="navBar">
+                <div className="search-container">
+                    <form>
+                        <input type="text" name="name" placeholder="Search..." />
+                    </form>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
                 <Notes array={this.state.array}/>
             </div> 
         );
