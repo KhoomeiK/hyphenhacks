@@ -61,14 +61,30 @@
   color: white;
 }
 
+.list {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+}
+
+.list:hover {
+  background-color: #f0e68c;
+}
+
 .list-item {
   background-color: #fffacd;
   display: block;
   border: 1px solid #f0e68c;
   text-align: left;
-  margin: 4px;
+  margin: 0px;
   font-size: 16px;
   padding: 12px 16px;
+  height: 54px;
   font-weight: bold;
   text-decoration: none;
   transition-duration: 0.2s;
@@ -82,13 +98,10 @@ span {
   font-family: "font";
 }
 
-span .buttonStyle {
-  /* fontSize: 100%;
-      backgroundColor: #00BFFF;
-      fontFamily: './font.ttf';
-      color: black;
-      margin: 10px;
-      padding: 10px; */
+.buttonStyle {
+  color: black;
+  margin: 10px;
+  padding: 10px;
   border: 1px solid black;
 }
 
