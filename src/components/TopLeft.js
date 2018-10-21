@@ -21,53 +21,48 @@ export default class TopLeft extends Component {
         },
         {
           id: "23456",
-<<<<<<< HEAD
-          title: "npr california report 10/1",
-          summary: "test num 3"
-=======
-          title: "complete sex",
-          summary: "time to completely sex"
+          title: "npr",
+          summary: "test"
         },
         {
           id: "23425",
           title: "",
-          summary: "time to neckrope"
+          summary: "test"
         },
         {
           id: "23541432",
           title: "",
-          summary: "sex"
+          summary: "test"
         },
         {
           id: "234251",
           title: "",
-          summary: "time to neckrope"
+          summary: "test"
         },
         {
           id: "2354134",
           title: "",
-          summary: "sex"
+          summary: "test"
         },
         {
           id: "234255234",
           title: "",
-          summary: "time to neckrope"
+          summary: "test"
         },
         {
           id: "23542455",
           title: "",
-          summary: "sex"
+          summary: "test"
         },
         {
           id: "2255225",
           title: "",
-          summary: "sex"
+          summary: "test"
         },
         {
           id: "234565",
           title: "",
-          summary: "time to completely sex"
->>>>>>> 749e6655aa723737c0ae6b0a01185c488fc22c11
+          summary: "test"
         }
       ]
     };
